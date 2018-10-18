@@ -1,0 +1,9 @@
+.AddPlayer {
+    padding: 10px 20px;
+    width: 500px;
+    text-align: left;
+    background-color: #90ccfd;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}

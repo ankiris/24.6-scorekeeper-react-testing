@@ -1,0 +1,30 @@
+.Player {
+    padding: 10px 20px;
+    width: 500px;
+    text-align: left;
+    background-color: #90ccfd;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+.Player_name {
+    background-color: #90ccfd;
+    color: #696969;
+    width: 200px;
+}
+.Player_score {
+    background-color: #90ccfd;
+    color: #696969;
+    width: 100px;
+}
+.Player_score, .Player_button, .Player_button_minus{
+    margin-left: 5px;
+    font-size: 20px;
+    padding: 4px;
+    }
+.Player_button, .Player_button_minus {
+    cursor: pointer;
+    background-color: #696969;
+    padding: 10px 15px;
+    color: white;
+}
