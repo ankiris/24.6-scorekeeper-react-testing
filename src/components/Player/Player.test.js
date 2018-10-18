@@ -39,9 +39,19 @@ it('renders correct name', () => {
     const mockedOnPlayerScoreChange = jest.fn();
     const playerComponent = shallow(<Player onPlayerScoreChange={mockedOnPlayerScoreChange} />);
   
-    const plusButton = playerComponent.find('.Player_button_minus');
+    const minusButton = playerComponent.find('.Player_button_minus');
   
-    plusButton.simulate('click');
+    minusButton.simulate('click');
   
     expect(mockedOnPlayerScoreChange).toBeCalledWith(-1);
+  });
+
+  it("should remove the player", () => {
+    const mockedOnRemovePlayer = jest.fn();
+    const playerComponent = shallow(<Player onPlayerRemove={mockedOnRemovePlayer} />);
+
+    const removeButton = playerComponent.find(".Player_button_remove");
+    removeButton.simulate("click");
+
+    expect(mockedOnRemovePlayer).toBeCalledWith();
   });

@@ -46,3 +46,22 @@ it('renders Score', () => {
     expect(mockedOnScoreUpdate).toBeCalledWith(0, 10);
 
 });
+
+it("removes a playrer", () => {
+    const players = [
+      {
+        name: "Kunegunda",
+        score: 5
+      }
+    ];
+    const mockOnPlayerRemove = jest.fn();
+    const playerComponent = shallow(
+      <PlayersList players={players} onPlayerRemove={mockOnPlayerRemove} />
+    );
+    const firstPlayer = playerComponent.find(Player).first();
+    
+    const onPlayerRemove = firstPlayer.prop("onPlayerRemove");
+    onPlayerRemove(0);
+
+    expect(mockOnPlayerRemove).toBeCalledWith(0);
+  });
